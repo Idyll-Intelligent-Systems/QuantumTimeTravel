@@ -1,0 +1,15 @@
+{
+  "states": ["A", "B", "C"],
+  "initial": "A",
+  "ABC": ["A", "B", "C"],
+  "policy": {
+    "mode": "real_world",
+    "allow_negative_edges": true,
+    "strict_invariants": true
+  },
+  "transitions": [
+    {"src": "A", "dst": "B", "attributes": {"distance_m": 3.0e11, "earth_departure_epoch_s": 1700000000, "earth_arrival_epoch_s": 1700864000, "risk_prob": 0.01, "energy_j": 4.0e12}},
+    {"src": "B", "dst": "C", "attributes": {"distance_m": 5.0e11, "duration_s": 100000, "risk_prob": 0.02, "energy_j": 7.0e12}},
+    {"src": "C", "dst": "A", "attributes": {"distance_m": 2.0e11, "duration_s": 80000, "risk_prob": 0.015, "energy_j": 2.0e12}}
+  ]
+}

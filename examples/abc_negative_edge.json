@@ -1,0 +1,11 @@
+{
+  "states": ["A", "B", "C"],
+  "initial": "A",
+  "ABC": ["A", "B", "C"],
+  "policy": {"allow_negative_edges": true, "strict_invariants": true},
+  "transitions": [
+    {"src": "A", "dst": "B", "attributes": {"energy_j": 1e9, "duration_s": 10, "credits": 100.0, "risk_prob": 0.0}},
+    {"src": "B", "dst": "C", "attributes": {"energy_j": 2e9, "duration_s": 5,  "risk_prob": 0.0}},
+    {"src": "C", "dst": "A", "attributes": {"energy_j": 3e9, "duration_s": 7,  "risk_prob": 0.0}}
+  ]
+}

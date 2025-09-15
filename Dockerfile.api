@@ -1,0 +1,9 @@
+FROM python:3.12-slim
+WORKDIR /app
+COPY pyproject.toml /app/
+COPY src /app/src
+COPY README.md LICENSE /app/
+RUN pip install --no-cache-dir .[api]
+ENV QTT_LOG_DIR=/var/log/qtt
+EXPOSE 8000
+CMD ["python", "-m", "uvicorn", "quantum_time_travel.api:app", "--host", "0.0.0.0", "--port", "8000"]

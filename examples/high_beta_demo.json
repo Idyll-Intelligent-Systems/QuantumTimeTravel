@@ -1,0 +1,11 @@
+{
+  "states": ["A", "B", "C"],
+  "initial": "A",
+  "ABC": ["A", "B", "C"],
+  "policy": {"mode": "real_world", "allow_negative_edges": true, "strict_invariants": true, "weights": {"energy":1.0, "earth_time":0.1, "crew_time":0.2, "risk":2.0}, "energy_scale": 1e9},
+  "transitions": [
+    {"src": "A", "dst": "B", "attributes": {"distance_m": 9.0e12, "duration_s": 36000, "risk_prob": 0.08, "energy_j": 2.0e13}},
+    {"src": "B", "dst": "C", "attributes": {"distance_m": 1.5e13, "duration_s": 60000, "risk_prob": 0.1, "energy_j": 3.5e13}},
+    {"src": "C", "dst": "A", "attributes": {"distance_m": 6.0e12, "duration_s": 18000, "risk_prob": 0.05, "energy_j": 1.2e13}}
+  ]
+}
