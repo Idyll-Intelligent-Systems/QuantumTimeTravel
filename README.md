@@ -2,6 +2,8 @@
 
 [![Deploy static site to GitHub Pages](https://github.com/Idyll-Intelligent-Systems/QuantumTimeTravel/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/Idyll-Intelligent-Systems/QuantumTimeTravel/actions/workflows/deploy-pages.yml)
 
+[![Deploy static site to GitHub Pages](https://github.com/Idyll-Intelligent-Systems/QuantumTimeTravel/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/Idyll-Intelligent-Systems/QuantumTimeTravel/actions/workflows/deploy-pages.yml)
+
 Time travel software engine, wanna include quantum hardware, bio-tech, and test subjects and actually travel? Feel free to reach out—let's leave our past and go beyond Time!
 
 ## Live site (GitHub Pages)
@@ -11,6 +13,13 @@ Time travel software engine, wanna include quantum hardware, bio-tech, and test 
 Notes:
 
 - The web UI is static and can call the API. When hosted on GitHub Pages, set the API base via the header “API” field or add `?api=https://your-host/api` to the URL.
+
+### Enable Pages + verify
+
+1) Settings → Pages → Source: select “GitHub Actions”, Save.
+2) Trigger a deployment: push to `main`, or Actions → "Deploy static site to GitHub Pages" → Run workflow.
+3) Verify: open the latest workflow run; both jobs (build, deploy) should pass. The deployment exposes the URL under the `github-pages` environment.
+4) First load: open the live site and set the API base in the header (e.g., `https://your-domain/api`).
 
 ## X Social Accounts
 
