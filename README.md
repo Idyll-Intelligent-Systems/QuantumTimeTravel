@@ -1,5 +1,7 @@
 # QuantumTimeTravel
 
+[![Deploy static site to GitHub Pages](https://github.com/Idyll-Intelligent-Systems/QuantumTimeTravel/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/Idyll-Intelligent-Systems/QuantumTimeTravel/actions/workflows/deploy-pages.yml)
+
 Time travel software engine, wanna include quantum hardware, bio-tech, and test subjects and actually travel? Feel free to reach out—let's leave our past and go beyond Time!
 
 ## Live site (GitHub Pages)
