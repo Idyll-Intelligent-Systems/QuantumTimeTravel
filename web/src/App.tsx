@@ -1,6 +1,6 @@
 import { Suspense, lazy, useEffect, useState } from 'react'
 import './theme.css'
-import { planFromSpec, readRepoFile, validateSpec, getStatus } from './api'
+import { planFromSpec, readRepoFile, validateSpec, getStatus, resolveApiBase, setApiBase, clearApiBase } from './api'
 const GraphView = lazy(() => import('./GraphView'))
 const FourDView = lazy(() => import('./components/FourDView'))
 import PlannerForm from './PlannerForm'
@@ -224,6 +224,7 @@ export default function App() {
   const [status, setStatus] = useState<{version?: string; run_id?: string} | null>(null)
   const [pollOn, setPollOn] = useState<boolean>(true)
   const [downloading, setDownloading] = useState<boolean>(false)
+  const [apiInput, setApiInput] = useState<string>(() => resolveApiBase() ?? '')
 
   useEffect(() => {
     let cancel = false
@@ -267,7 +268,19 @@ export default function App() {
         <button className="btn" onClick={() => setTab('planner')}>Planner</button>
         <button className="btn" onClick={() => setTab('repo')}>Repository</button>
         <button className="btn" onClick={() => setTab('status')}>Status</button>
+        <a className="btn" href="https://github.com/Idyll-Intelligent-Systems/QuantumTimeTravel" target="_blank" rel="noreferrer">View on GitHub</a>
         <div style={{ marginLeft: 'auto', display: 'flex', gap: 8, alignItems: 'center' }}>
+          <label className="mono" style={{ fontSize: 12, color: 'var(--muted)' }}>API</label>
+          <input
+            className="mono"
+            style={{ width: 240 }}
+            type="text"
+            placeholder="/api or https://host/api"
+            value={apiInput}
+            onChange={e => setApiInput(e.target.value)}
+          />
+          <button className="btn" onClick={() => { if (apiInput) { setApiBase(apiInput.trim()); location.reload() } }} disabled={!apiInput}>Save</button>
+          <button className="btn" title="Clear saved API base and use defaults" onClick={() => { clearApiBase(); setApiInput(resolveApiBase() ?? ''); location.reload() }}>Reset</button>
           <label className="mono" style={{ fontSize: 12, color: 'var(--muted)' }}>Health poll</label>
           <input type="checkbox" checked={pollOn} onChange={e => setPollOn(e.target.checked)} />
           <button className="btn" onClick={handleDownloadLogs} disabled={downloading}>{downloading ? 'Downloading…' : 'Download logs'}</button>
