@@ -13,6 +13,7 @@ Time travel software engine, wanna include quantum hardware, bio-tech, and test 
 Notes:
 
 - The web UI is static and can call the API. When hosted on GitHub Pages, set the API base via the header “API” field or add `?api=https://your-host/api` to the URL.
+- The Pages workflow builds the UI from the `web/` directory and publishes the generated static files from `web/dist/`.
 
 ### Enable Pages + verify
 

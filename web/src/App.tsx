@@ -268,7 +268,8 @@ export default function App() {
         <button className="btn" onClick={() => setTab('planner')}>Planner</button>
         <button className="btn" onClick={() => setTab('repo')}>Repository</button>
         <button className="btn" onClick={() => setTab('status')}>Status</button>
-        <a className="btn" href="https://github.com/Idyll-Intelligent-Systems/QuantumTimeTravel" target="_blank" rel="noreferrer">View on GitHub</a>
+  <a className="btn" href="https://idyll-intelligent-systems.github.io/QuantumTimeTravel/" target="_blank" rel="noreferrer">Live Demo</a>
+  <a className="btn" href="https://github.com/Idyll-Intelligent-Systems/QuantumTimeTravel" target="_blank" rel="noreferrer">View on GitHub</a>
         <div style={{ marginLeft: 'auto', display: 'flex', gap: 8, alignItems: 'center' }}>
           <label className="mono" style={{ fontSize: 12, color: 'var(--muted)' }}>API</label>
           <input
