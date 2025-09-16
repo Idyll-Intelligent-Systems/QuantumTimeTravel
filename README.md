@@ -24,11 +24,9 @@ Notes:
 
 ## X Social Accounts
 
-- [https://x.com/shivaveld_idyll](https://x.com/shivaveld_idyll)
 - [https://x.com/exezexy9](https://x.com/exezexy9)
 - [https://x.com/vesolutions03](https://x.com/vesolutions03)
 - [https://x.com/VSK2k07_InTenSE](https://x.com/VSK2k07_InTenSE)
-- [https://x.com/VSK2k0725](https://x.com/VSK2k0725)
 
 ## Content
 
@@ -42,11 +40,8 @@ Test on real world objects using actual physical representations of proposed QAS
 
 Feel free to reach out at
 
-Email1: <shiva-veldi@ai-assistant-idyll.com>
 
-Email2: <exezexy9@gmail.com>
-
-Email3: <vesolutions03@gmail.com>
+Emails: <exezexy9@gmail.com>, <vesolutions03@gmail.com>
 
 ## Usage (prototype)
 
